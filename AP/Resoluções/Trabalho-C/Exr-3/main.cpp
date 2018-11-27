@@ -12,10 +12,18 @@ typedef struct aluno Aluno;
 
 int main() {
 
-	Aluno aluno = (aluno *)malloc(sizeof()); 
+	Aluno *aluno = (Aluno *)malloc(sizeof(Aluno)); 
+	printf_s("Digite o nome do aluno a ser inserido: ");
 	
+	fgets(aluno->nome, sizeof(aluno->nome), stdin);
 
 
+	printf_s("\nDigite o RU do aluno a ser inserido: "); 
+	scanf_s("%d", &(aluno->ru));
+	flush();
+
+	printf_s("\n\n Nome: %s \n RU: %d\n\n", aluno->nome, aluno->ru);
+	system("pause");
 	return 0;
 }
 
