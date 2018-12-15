@@ -57,11 +57,11 @@ void flush() {
 
 /*
 	Exercicio 3 - Faça um algoritmo em linguagem C com as seguintes funcionalidades:
- Receba um registro, com dois campos, como dados de entrada.
- O primeiro campo é um vetor que vai armazenar o nome do aluno.
- O segundo campo é uma variável do tipo inteiro que vai armazenar o RU do
+ Receba um registro, com dois campos, como dados de entrada.
+ O primeiro campo é um vetor que vai armazenar o nome do aluno.
+ O segundo campo é uma variável do tipo inteiro que vai armazenar o RU do
 aluno.
- Imprime na tela os dados armazenados na estrutura.
+ Imprime na tela os dados armazenados na estrutura.
 //Um ponteiro de Aluno declararia-se assim: Aluno *aluno = (Aluno *)malloc(sizeof(Aluno)); 
 //Mas o enunciado não cita ponteiros
 	*/

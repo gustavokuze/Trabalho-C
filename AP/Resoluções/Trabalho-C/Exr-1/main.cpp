@@ -3,13 +3,13 @@
 
 int main() {
 
-	//Declaração da variável que irá conter a primeira letra do nome, do tipo char, inicializada com o sinal de subtração (-)
+	/*Declaração da variável que irá conter a primeira letra do nome, do tipo char, inicializada com o sinal de subtração (-) */
 	char primeira_letra_do_nome = '-',
 
 		/*declaração do ponteiro que irá armazenar o endereço de memória da variável primeira_letra_do_nome*/
 		*p_primeira_letra_do_nome;
 
-	//Declaração da variável que irá conter os dois ultimos digitos do RU, do tipo int, inicializada com o valor zero
+	/*Declaração da variável que irá conter os dois ultimos digitos do RU, do tipo int, inicializada com o valor zero*/
 	int ultimos_2_digitos_ru = 0,
 
 		/*declaração do ponteiro que irá armazenar o endereço de memória da variável ultimos_2_digitos_ru*/
@@ -23,13 +23,10 @@ int main() {
 		*p_ultimos_4_digitos_ru;
 
 
-
-
 	/*Aqui é feita a atribuição do endereço de memória das variáveis a seus respectivos ponteiros*/
 	p_primeira_letra_do_nome = &primeira_letra_do_nome;
 	p_ultimos_2_digitos_ru = &ultimos_2_digitos_ru;
 	p_ultimos_4_digitos_ru = &ultimos_4_digitos_ru;
-
 
 
 	/*Aqui é mostrado o valor inicial das variáveis na tela*/
@@ -53,31 +50,19 @@ int main() {
 	return 0;
 }
 
-//declaração do método responsável pela limpeza do buffer do teclado
-//void flush() {
-//	int c;
-//	while ((c = getchar()) != '\n' && c != EOF) {}
-//}
 
 
+/*
+Exercício 1:
+Escreva um algoritmo em linguagem C com as seguintes instruções:
+1. Declare três variáveis (inteiro, real e char);
+2. Declare três ponteiros;
+3. Associe as variáveis aos ponteiros;
+4. Modifique os valores de cada variável indiretamente usando os ponteiros
+associados. Para armazenar os valores nas variáveis, armazene na variável
+char a primeira letra do seu nome, na variável inteira os dois últimos dígitos
+do seu RU e na variável real os 4 últimos dígitos do seu RU, sendo os 2
+últimos os valores com virgula;
+5. Imprima na tela os valores das variáveis antes e após a modificação.
 
-///*aqui é feita a requisição ao usuário para que ele digite a primeira letra do seu nome.
-//	Logo em seguida a atribuimos a na variável primeira_letra_do_nome */
-//printf("\nDigite a primera letra do seu nome: ");
-//
-///*Aqui é onde é feita a atribuição da primeira letra digitada ao valor do ponteiro, que aponta na variável primeira_letra_do_nome*/
-//*p_primeira_letra_do_nome = getchar();
-//
-////limpeza de buffer
-//flush();
-//
-//
-///*aqui é feita a requisição ao usuário para que ele digite os ultimos dois digitos do RU.
-//Logo em seguida a atribuimos a na variável ultimos_2_digitos_ru */
-//printf("\nDigite os ultimos dois digitos do seu RU: ");
-//
-///*Aqui é onde é feita a atribuição da primeira letra digitada ao valor do ponteiro, que aponta na variável primeira_letra_do_nome*/
-//*p_primeira_letra_do_nome = getchar();
-//
-////limpeza de buffer
-//flush();
+*/

@@ -1,45 +1,48 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+
+// prototipagem
 void flush();
 
 int main() {
 
-	/*
-		Declaração das variáveis e dos ponteiros
-	*/
+	/* Declaração das variáveis e dos ponteiros */
 	int ru, valor, *p_ru, *p_valor;
-	 
-	// atribuição do endereço de memória das variáveis aos respectivos ponteiros
+
+	/* atribuição do endereço de memória das variáveis aos respectivos ponteiros*/
 	p_ru = &ru;
 	p_valor = &valor;
 
-	//requisição ao usuário pelo RU
-	printf("Digite seu RU: "); 
-	//atribuição do valor digitado à variável através do ponteiro
+	/* requisição ao usuário pelo RU */
+	printf("Digite seu RU: ");
+
+	/* atribuição do valor digitado à variável através do ponteiro
+		NOTA: o Visual Studio não permite a utilização da função
+		scanf, então utilizei o scanf_s que tem o funcionamento equivalente */
 	scanf_s("%d", p_ru);
-	//limpeza do buffer
+
+	/* limpeza do buffer */
 	flush();
-	
-	//abaixo é feito exatamente o mesmo processo, mas dessa vez para o valor ao invés do RU
-	printf("\nDigite o valor para comparar ao RU: "); 
+
+	/* abaixo é feito exatamente o mesmo processo, mas dessa vez para o valor ao invés do RU */
+	printf("\nDigite o valor para comparar ao RU: ");
 	scanf_s("%d", p_valor);
 	flush();
 
 
-	// comparação do valor com o RU através dos ponteiros
-	if (*p_ru > *p_valor) {
-		printf("\nO seu RU e maior que o valor digitado: RU -> %d | Valor -> %d \n", *p_ru, *p_valor);
-	}
-	else {
+	/* comparação do valor com o RU através dos ponteiros utilizando operador ternário */
+
+	(*p_ru > *p_valor) ?
+		printf("\nO seu RU e maior que o valor digitado: RU -> %d | Valor -> %d \n", *p_ru, *p_valor) :
 		printf("\nO valor digitado e maior que o seu RU: RU -> %d | Valor -> %d \n", *p_ru, *p_valor);
-	}
 
 	system("pause");
 
-	return 0; 
+	return 0;
 }
 
+// método responsável pela limpeza do buffer do teclado
 void flush() {
 	char c;
 	while ((c = getchar()) != '\n' && c != EOF) {}
